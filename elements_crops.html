@@ -1,0 +1,20 @@
+<?php
+$state=$_GET['crop'];
+$c1=array('rice','jowar','bajra','maize','cotton','groundnut','jute','sugaarcane','turmeric','pulses');
+$c2=array('wheat','oat','gram','pea','barley','potato','tomato','onion','oil seed');
+$c3=array('pumpkin','cucumber','bitter gourd','pumpkin','muskmelon');
+if($state=="bihar"){
+foreach($c1 as $c)
+	echo "<option>$c</option>";
+}
+else if ($state=="uttar pradesh"){
+	foreach($c2 as $c)
+	echo "<option>$c</option>";
+}
+else if ($state="jharkhand"){
+	foreach($c3 as $c)
+	echo "<option>$c</option>";
+}
+else
+	echo "<option>first select state</option>";
+?>
